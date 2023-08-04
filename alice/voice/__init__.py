@@ -1,1 +1,1 @@
-import speak
+from . import speak
