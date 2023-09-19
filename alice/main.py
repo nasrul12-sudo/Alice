@@ -1,20 +1,25 @@
-import dataBase.data as DB
-import brain.question as q
-import voice.speak as s
-import argparse
+import dataBase.data as database
+import brain.question as brain
+import voice.speak as speak
+import pentes.tools as tools
 import pyfiglet as figle
+import numpy
 import argparse
+import argparse
+import os
 
-
-print("hay broder")
+from pentes.tools import pentes
+from voice import speak
 
 result = figle.figlet_format("Hy", font='slant')
 print(result)
 
-parser = argparse.ArgumentParser(description='jus an alic   e', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument("-a", "--archiver", action='store_true', help='archive mode')
-args = parser.parse_args()
-config = vars(args)
-print(config)
+ghosTrack = pentes('ghos')
+ghosTrack.ghostrack()
 
-s.first()
+# data = pentes('https://www.vizzed.com/play/game.php%20id=%20product-item.php')
+# data.sqlmap()
+
+# test_log = os.open('/home/nasrul/.local/share/sqlmap/output/testphp.vulnweb.com/log', os.O_RDONLY)
+# readByte = os.read(test_log,10000000000)
+# print(readByte[-1:])

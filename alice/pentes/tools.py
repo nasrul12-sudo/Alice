@@ -5,15 +5,13 @@ class pentes:
         self.inp = inp
         
     def ghostrack(self):
-        folder = os.listdir('/mnt/USBC/pentes')
-        for file in folder:
-            if file == 'GhostTrack':
-                os.system('/mnt/USBC/pentes/GhostTrack/GhostTR.py')
-            else:
-                print('maaf terjadi error'); break
-
+        os.system('python3 /mnt/USBC/pentes/GhostTrack/GhostTR.py')
+        
     def burp(self):
         os.system('sudo burp')
-        
-data = pentes('data')
-data.burp()
+
+    def sqlmap(self):
+        os.system(f'sqlmap -u {self.inp} --dbs')
+    
+    def hydra(self):
+        os.system(f'hydra ')
