@@ -95,4 +95,7 @@ class Table:
         myresult = mycursor.fetchall()
         for x in myresult:
             print(x)
+
+if __name__ == "__main__":
+    pass
         
